@@ -4,9 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="./normalize.css">
+    <script defer src="./main.js"></script>
     <title>todo</title>
 </head>
 <body>
-    
+  <nav class="navbar">
+    <a class="navbar-burger">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 12H21" stroke="#FFFFFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M3 6H21" stroke="#FFFFFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M3 18H21" stroke="#FFFFFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+    <div class="navbar-menu">
+      <div class="navbar-items-container">
+        <a class="navbar-item">
+          <img class="sidebar-icons" src="../images/inbox.svg" alt="inbox">
+          inbox
+        </a>
+        <a class="navbar-item">
+          <img class="sidebar-icons" src="../images/check.svg" alt="completed">
+          completed
+        </a>
+        <a class="navbar-item">
+          <img class="sidebar-icons" src="../images/star.svg" alt="today">
+          today
+        </a>
+
+      </div>
+    </div>
+  </nav>
+  <section class="section inbox"></section>
+  <section class="section completed"></section>
+  <section class="section today"></section>
 </body>
 </html>
