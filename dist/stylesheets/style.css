@@ -15,6 +15,7 @@ body {
 }
 
 .navbar .navbar-burger {
+  cursor: pointer;
   position: relative;
   z-index: 100;
 }
