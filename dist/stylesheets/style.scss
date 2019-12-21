@@ -106,49 +106,74 @@ body {
         font-size: 3rem;
     }
 
-    .item-outside {
+    .todo-item {
         position: relative;
-        display: flex;
-        align-items: center;
+        background-color: color(secondaryBackground);
         padding-left: 30px;
         padding-right: 15px;
         padding-top: 25px;
         padding-bottom: 25px;
-        color: color(paragraph);
-        background-color: color(secondaryBackground);
         border-radius: 10px;
-        
-        .importance {
-            position: absolute;
-            left: 0;
-            width: 15px;
-            height: 100%;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
-            background-color: color(veryImportant);
-        }
+        transition: all 1s ease;
 
-        .checkbox {
-            position: relative;
-            background-image: url("../images/checkbox.svg");
-            background-repeat: no-repeat;
-            background-position: center;
-            padding: 10px;
-            width: 26px;
-            height: 26px;
+        .item-content {
+            display: flex;
+            align-items: center;
+            color: color(paragraph);
             
-            &.complete {
-                background-image: url("../images/checkbox-complete.svg");
+            .importance {
+                position: absolute;
+                left: 0;
+                width: 15px;
+                height: 100%;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                background-color: color(veryImportant);
+            }
+    
+            .checkbox {
+                position: relative;
+                background-image: url("../images/checkbox.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                padding: 10px;
+                width: 26px;
+                height: 26px;
+                
+                &.complete {
+                    background-image: url("../images/checkbox-complete.svg");
+                }
+            }
+            
+            .item-info {
+                pointer-events: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
             }
         }
-        
-        .item-info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+
+        &.item-inside {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            padding-left: 15px;
-            padding-right: 15px;
+            height: 100%;
+            padding-top: 70px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 0;
+            transition: all 1s ease;
+
+            .importance {
+                top: 50%;
+                transform: translateY(-50%);
+                height: 30%;
+                border-radius: 0;
+            }
         }
     }
 }

@@ -41,9 +41,18 @@ const toggleTabs = (() => {
   tabs[0].click();
 })();
 
+// toggle between different svg's when checkbox is clicked
 const checkboxes = document.querySelectorAll('.checkbox');
 checkboxes.forEach((checkbox) => {
   checkbox.addEventListener('click', (e) => {
     e.target.classList.toggle('complete');
+  });
+});
+
+// expands todo item to show descriptions and such
+const todoItems = document.querySelectorAll('.todo-item');
+todoItems.forEach((item) => {
+  item.addEventListener('click', (e) => {
+    e.target.classList.add('item-inside');
   });
 });
