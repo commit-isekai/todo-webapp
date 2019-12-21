@@ -40,3 +40,10 @@ const toggleTabs = (() => {
 
   tabs[0].click();
 })();
+
+const checkboxes = document.querySelectorAll('.checkbox');
+checkboxes.forEach((checkbox) => {
+  checkbox.addEventListener('click', (e) => {
+    e.target.classList.toggle('complete');
+  });
+});
