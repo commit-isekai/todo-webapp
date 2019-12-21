@@ -17,7 +17,7 @@ body {
 .navbar .navbar-burger {
   cursor: pointer;
   position: relative;
-  z-index: 100;
+  z-index: 40;
 }
 
 .navbar .navbar-burger .fa-bars {
@@ -32,6 +32,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
+  z-index: 10;
   top: 0;
   left: 0;
   width: 0;
@@ -40,6 +41,8 @@ body {
   overflow: hidden;
   -webkit-transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .navbar-menu.is-active {
@@ -79,28 +82,90 @@ body {
   padding-bottom: 16px;
   color: #B8C1EC;
   border-radius: 10px;
-  -webkit-transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 .navbar .navbar-menu .navbar-items-container .navbar-item.is-active {
   background-color: #232946;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: calc(90% - 20px);
   padding-left: 20px;
   margin-left: 10px;
-  width: calc(90% - 20px);
 }
 
 .navbar .navbar-menu .navbar-items-container .navbar-item .sidebar-icons {
   margin-right: 10px;
 }
 
-section {
+.section {
   display: none;
+  padding: 0 20px;
 }
 
-section.is-active {
+.section.is-active {
   display: block;
+}
+
+.section .tab-title {
+  color: #FFFFFE;
+  font-size: 3rem;
+}
+
+.section .item-outside {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 30px;
+  padding-right: 15px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: #B8C1EC;
+  background-color: #121629;
+  border-radius: 10px;
+}
+
+.section .item-outside .importance {
+  position: absolute;
+  left: 0;
+  width: 15px;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #FF6A6A;
+}
+
+.section .item-outside .checkbox {
+  position: relative;
+  background-image: url("../images/checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 10px;
+  width: 26px;
+  height: 26px;
+}
+
+.section .item-outside .checkbox.complete {
+  background-image: url("../images/checkbox-complete.svg");
+}
+
+.section .item-outside .item-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 /*# sourceMappingURL=style.css.map */
